@@ -5,38 +5,15 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье число: ");
 int number3 = Convert.ToInt32(Console.ReadLine());
 
-int max = 0;
+int max = number1;
 
-if (number1 > number2)
+if (max < number2)
 {
-  if (number1 > number3)
-  {
-    max = number1;
-  }
-  else
-  {
-    max = number3;
-  }
-  Console.WriteLine($"Максимальное число: {max}");
-
+  max = number2;
 }
-else if (number1 < number2)
+if (max < number3)
 {
-  if (number2 > number3)
-  {
-    max = number2;
-  }
-  else
-  {
-    max = number3;
-  }
-  Console.WriteLine($"Максимальное число: {max}");
-
+  max = number3;
 }
-else
-{
-  Console.WriteLine("Числа равны");
-}
-
-
+Console.WriteLine($"Максимальное число: {max}");
 
