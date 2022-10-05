@@ -11,7 +11,7 @@ int[] Find(string[] str)
 {
   int size = str.Length;
   int count = 0;
-  string index = "0";
+  // string index = "0";
   int[,] result = new int[size, 2];
   int countResult = 0;
   //0 - количество элементов самой длиной последовательности
