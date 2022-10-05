@@ -16,10 +16,9 @@
 
     PrintMassive(elements);
     System.Console.WriteLine();
+    System.Console.WriteLine(FindCountOfPositive(elements));
 
-    System.Console.WriteLine(FindSum(elements));
-
-    int FindSum(int[] elements)
+    int FindCountOfPositive(int[] elements)
     {
       int count = 0;
       for (int i = 0; i < elements.Length; i++)
@@ -33,9 +32,6 @@
 
 
   #region Fill&Print 
-  // class FP
-  // {
-
 
   static void FillArray(int[] array, int min, int max)
   {
@@ -54,7 +50,6 @@
       array[i] = Math.Round(randGeneration.NextDouble() * 20, 2);
     }
   }
-
 
   static void PrintMassive(double[] array)
   {
@@ -102,6 +97,6 @@
     }
     Console.Write("]");
   }
-  // }
+
   #endregion
 }

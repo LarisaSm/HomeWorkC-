@@ -1,4 +1,4 @@
 ﻿Console.Write("Введите числа через запятую: ");
-int[] masA = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
+int[] massive = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
 
-Console.WriteLine(String.Join(",", masA));
+Console.WriteLine(String.Join(",", massive));

@@ -3,24 +3,24 @@ int[] numbers = new int[size];
 FillArray(numbers);
 
 Console.Write($"В массиве ");
-PrintMassive(numbers);
-Console.Write($" сумма элементов, стоящих на нечётных позициях -> {SumNe4(numbers)}\n");
+PrintArray(numbers);
+Console.Write($" сумма элементов, стоящих на нечётных позициях -> {SummOnOddIndex(numbers)}\n");
 
-int SumNe4(int[] arr)
+int SummOnOddIndex(int[] arr)
 {
-  int result = 0;
+  int summ = 0;
   for (int i = 0; i < arr.Length; i++)
   {
     if (i % 2 != 0)
     {
-      result = result + arr[i];
+      summ = summ + arr[i];
     }
   }
-  return result;
+  return summ;
 }
 
 
-void PrintMassive(int[] array)
+void PrintArray(int[] array)
 {
   Console.Write("[");
   for (int i = 0; i < array.Length; i++)

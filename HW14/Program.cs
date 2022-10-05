@@ -3,12 +3,11 @@ int[] numbers = new int[size];
 FillArray(numbers);
 
 Console.Write($"В массиве ");
-PrintMassive(numbers);
-Console.Write($"четных чисел {Find4et(numbers)}\n");
+PrintArray(numbers);
+Console.Write($"четных чисел {CountOfEven(numbers)}\n");
 
 
-
-int Find4et(int[] arr)
+int CountOfEven(int[] arr)
 {
   int count = 0;
   for (int i = 0; i < arr.Length; i++)
@@ -30,7 +29,7 @@ void FillArray(int[] array)
   }
 }
 
-void PrintMassive(int[] array)
+void PrintArray(int[] array)
 {
   Console.Write("[");
   for (int i = 0; i < array.Length; i++)

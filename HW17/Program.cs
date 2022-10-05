@@ -1,17 +1,19 @@
 ﻿Console.Write("Введите элементы(цифры или  буквы) через запятую: ");
-string[] Elements = Console.ReadLine()!.Split(",").ToArray(); ;
+string[] elements = Console.ReadLine()!.Split(",").ToArray(); ;
 
-int[] result = Find(Elements);
+int[] result = Find(elements);
 Console.Write("В наборе элементов: ");
-PrintMassive(Elements);
+PrintArray(elements);
 
-Console.Write($"\n количество элементов самой длинной последовательности - {result[0]} , \n элемент этой последовательности - {Elements[result[1]]}, \n номер элемента, который является началом последовательности - {result[1]} \n");
+Console.Write($"\n количество элементов самой длинной последовательности - {result[0]} ,"
+             + $" \n элемент этой последовательности - {elements[result[1]]}, "
+             + $"\n номер элемента, который является началом последовательности - {result[1]} \n");
+
 
 int[] Find(string[] str)
 {
   int size = str.Length;
   int count = 0;
-  // string index = "0";
   int[,] result = new int[size, 2];
   int countResult = 0;
   //0 - количество элементов самой длиной последовательности
@@ -50,7 +52,7 @@ int FindMax(int[,] arr)
   return maxIndex;
 }
 
-void PrintMassive(string[] array)
+void PrintArray(string[] array)
 {
   Console.Write("[");
   for (int i = 0; i < array.Length; i++)
@@ -60,25 +62,6 @@ void PrintMassive(string[] array)
     {
       Console.Write(", ");
     }
-  }
-  Console.Write("]");
-}
-
-void PrintMassive2(int[,] array)
-{
-  Console.Write("[");
-  int rows = array.GetUpperBound(0) + 1;    // количество строк
-  int columns = array.Length / rows;        // количество столбцов
-                                            // или так
-                                            // int columns = numbers.GetUpperBound(1) + 1;
-
-  for (int i = 0; i < rows; i++)
-  {
-    for (int j = 0; j < columns; j++)
-    {
-      Console.Write($"{array[i, j]} \t");
-    }
-    Console.WriteLine();
   }
   Console.Write("]");
 }

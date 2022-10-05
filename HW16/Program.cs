@@ -4,11 +4,11 @@ FillArray(numbers);
 double min = FindMin(numbers);
 double max = FindMax(numbers);
 Console.Write($"В массиве ");
-PrintMassive(numbers);
-Console.Write($" разница между максимальным и минимальным элементами -> {Razn(min, max)}\n");
+PrintArray(numbers);
+Console.Write($" разница между максимальным и минимальным элементами -> {DiffMinMaxInArray(min, max)}\n");
 
 
-double Razn(double min, double max)
+double DiffMinMaxInArray(double min, double max)
 {
   return Math.Round(max - min, 3);
 }
@@ -46,7 +46,7 @@ void FillArray(double[] array)
 }
 
 
-void PrintMassive(double[] array)
+void PrintArray(double[] array)
 {
   Console.Write("[");
   for (int i = 0; i < array.Length; i++)

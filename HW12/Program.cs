@@ -1,16 +1,16 @@
 ﻿Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine(Summ(number));
+Console.WriteLine(SummOfDigit(number));
 
-int Summ(int a)
+int SummOfDigit(int number)
 {
-  a = Math.Abs(a);
+  number = Math.Abs(number);
   int res = 0;
-  while (a > 0)
+  while (number > 0)
   {
-    res = res + a % 10;
-    a = a / 10;
+    res = res + number % 10;
+    number = number / 10;
   }
   return res;
 }

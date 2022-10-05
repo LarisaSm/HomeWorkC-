@@ -1,15 +1,21 @@
 ﻿Console.WriteLine("Введите координаты точки А через \",\": ");
 // int number = int.Parse(Console.ReadLine()!);
 
-int[] masA = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
+int[] pointA = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
 
 Console.WriteLine("Введите координаты точки B через \",\": ");
-int[] masB = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
+int[] pointB = Console.ReadLine()!.Split(",").Select(int.Parse).ToArray();
 
-if (masA.Length == 3 && masB.Length == 3)
+if (pointA.Length == 3 && pointB.Length == 3)
 {
-  double d = Math.Sqrt(Math.Pow(masA[0] - masB[0], 2) + Math.Pow(masA[1] - masB[1], 2) + Math.Pow(masA[2] - masB[2], 2));
-  Console.WriteLine("Расстояние между точкой А с координатами {0},{1},{2} и точкой В с координатами  {3},{4},{5}  = {6}", masA[0], masA[1], masA[2], masB[0], masB[1], masB[2], d.ToString("#.##"));
+  double d = Math.Sqrt(Math.Pow(pointA[0] - pointB[0], 2)
+                      + Math.Pow(pointA[1] - pointB[1], 2)
+                      + Math.Pow(pointA[2] - pointB[2], 2));
+  Console.WriteLine("Расстояние между точкой А с координатами {0},{1},{2}"
+                    + " и точкой В с координатами  {3},{4},{5}  = {6}"
+                    , pointA[0], pointA[1], pointA[2],
+                    pointB[0], pointB[1], pointB[2],
+                    d.ToString("#.##"));
 }
 else
 {
