@@ -9,10 +9,16 @@ double[] Fibonachi(int number)
 {
   double[] fibonachi = new double[N];
   fibonachi[0] = 0;
-  fibonachi[1] = 1;
-  for (int i = 2; i < number; i++)
+
+  if (number == 1) return fibonachi;
+  else
   {
-    fibonachi[i] = fibonachi[i - 1] + fibonachi[i - 2];
+    fibonachi[1] = 1;
+
+    for (int i = 2; i < number; i++)
+    {
+      fibonachi[i] = fibonachi[i - 1] + fibonachi[i - 2];
+    }
   }
   return fibonachi;
 }
