@@ -9,7 +9,7 @@ System.Console.WriteLine($"Строка с наименьшей суммой э�
 
 int FindMinRow(int[,] matrix)
 {
-  int minSum = 0;
+  int minSum = 100000000;
   int minIndexI = 0;
   int sum;
   for (int i = 0; i < matrix.GetLength(0); i++)
@@ -19,7 +19,6 @@ int FindMinRow(int[,] matrix)
     {
       sum = sum + matrix[i, j];
     }
-    System.Console.WriteLine($"sum = {sum}");
     if (sum < minSum)
     {
       minSum = sum;
