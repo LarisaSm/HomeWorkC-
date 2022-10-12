@@ -5,12 +5,12 @@ int[,] numbers = new int[generator.Next(4, 8), generator.Next(4, 8)];
 FillPrint.FillPrint.FillArray(numbers);
 FillPrint.FillPrint.PrintMassive(numbers);
 System.Console.WriteLine();
-System.Console.WriteLine($"Строка с наибольшей суммой элементов = {FindMaxRow(numbers) + 1}");
+System.Console.WriteLine($"Строка с наименьшей суммой элементов = {FindMinRow(numbers) + 1}");
 
-int FindMaxRow(int[,] matrix)
+int FindMinRow(int[,] matrix)
 {
-  int maxSum = 0;
-  int maxIndexI = 0;
+  int minSum = 0;
+  int minIndexI = 0;
   int sum;
   for (int i = 0; i < matrix.GetLength(0); i++)
   {
@@ -19,11 +19,12 @@ int FindMaxRow(int[,] matrix)
     {
       sum = sum + matrix[i, j];
     }
-    if (sum > maxSum)
+    System.Console.WriteLine($"sum = {sum}");
+    if (sum < minSum)
     {
-      maxSum = sum;
-      maxIndexI = i;
+      minSum = sum;
+      minIndexI = i;
     }
   }
-  return maxIndexI;
+  return minIndexI;
 }
