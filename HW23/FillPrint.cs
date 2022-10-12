@@ -4,10 +4,11 @@ namespace FillPrint
   {
     public static void FillArray(int[] array, int min, int max)
     {
+      max++;
       Random randGeneration = new Random();
       for (int i = 0; i < array.Length; i++)
       {
-        array[i] = randGeneration.Next(min, max++);
+        array[i] = randGeneration.Next(min, max);
       }
     }
 
@@ -33,12 +34,13 @@ namespace FillPrint
     }
     public static void FillArray(int[,] array, int min, int max)
     {
+      max++;
       Random randGeneration = new Random();
       for (int i = 0; i < array.GetLength(0); i++)
       {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-          array[i, j] = randGeneration.Next(min, max++);
+          array[i, j] = randGeneration.Next(min, max);
         }
       }
     }
